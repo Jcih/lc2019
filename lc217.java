@@ -1,4 +1,4 @@
-//Solution I
+//Solution I time complexity O(nlogn + n), 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         if (nums == null || nums.length == 0) return false;
