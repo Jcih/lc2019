@@ -10,6 +10,7 @@ class Solution {
             }
         }
         
+        //when nums2 has leftover
         while (index2 >= 0) {
             nums1[index3--] = nums2[index2--];
         }
