@@ -1,4 +1,4 @@
-//Solution I: faster than 100%, Recursive. 
+//Solution I: faster than 100%, Recursive.
 
 
 /**
@@ -16,7 +16,7 @@ class Solution {
         dfs(res, root);
         return res;
     }
-    
+
     public void dfs(List<Integer> res, TreeNode root) {
         if (root == null) return;
         res.add(root.val);
@@ -40,13 +40,13 @@ class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         if (root == null) return res;
-        
+
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode curr = stack.pop();
             res.add(curr.val);
-            
+
             if (curr.right != null) {
                 stack.push(curr.right);
             }
@@ -54,8 +54,8 @@ class Solution {
                 stack.push(curr.left);
             }
         }
-        
+
         return res;
     }
-    
+
 }
